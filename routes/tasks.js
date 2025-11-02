@@ -151,7 +151,7 @@ router.delete('/:id', async (req, res) => {
       }
     }
 
-    sendResponse(res, 200, 'Task deleted', task);
+    return res.status(204).send();
   } catch (err) {
     sendResponse(res, 400, 'Bad Request', err.message);
   }
